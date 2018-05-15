@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controller;
+
+import model.Consulta;
+
+/**
+ *
+ * @author gabrieldeoliveira
+ */
+class consultaController {
+    
+    static Consulta objConsulta;
+
+    public consultaController() {
+    }
+
+    public boolean Instancia(Double renda) {
+        try {
+            this.objConsulta = new Consulta();
+            objConsulta.setRenda(renda);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    
+    public String medida(){
+        return objConsulta.faixaMinhaCasaMinhaVida();
+    }
+    
+}
